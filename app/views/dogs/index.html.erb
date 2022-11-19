@@ -1,0 +1,15 @@
+<% stylesheet_link_tag 'application' %>
+
+
+<div class="container">
+  <% @dogs.each do |dog| %>
+  <div class="item">
+    <h3><%=link_to dog.name, dog_path(dog) %></h3>
+    <div class="btn-edit"><%= button_to 'Edit', edit_dog_path(dog), method: 'get' %></div>
+    <div class="btn-destroy"><%= button_to 'Remove', dog_path(dog), method: 'delete', data: { confirm: 'Are you sure?' } %></div>
+  </div>
+  <% end %>
+  <div class="item">
+    <div class="btn-add"><%= link_to "Add a New Dog", new_dog_path %></div>
+  </div>
+</div>
