@@ -8,13 +8,28 @@ The setups steps expect following tools installed on the system.
 - Ruby [3.1.2]
 - Rails [7.0.4]
 
-##### 1. Check out the repository
+##### 1. Clone the repository
 
 ```bash
 git clone git@github.com:zkm/rails-crud.git
 ```
 
-##### 2. Create and setup the database
+##### 2. Confirm you have Ruby and Rails installed 
+```bash
+ruby --version && rails --version
+```
+
+##### 3. Install bundler
+```bash
+gem install bundler 
+```
+
+##### 4. Run the bundler
+```bash
+bundle install  
+```
+
+##### 5. Create and setup the database
 
 Run the following command to create and setup the database.
 
@@ -22,7 +37,7 @@ Run the following command to create and setup the database.
 rake db:migrate
 ```
 
-##### 4. Add some data so we can run tests
+##### 6. Add some data so we can run tests
 
 Run the following command to seed database.
 
@@ -30,7 +45,7 @@ Run the following command to seed database.
 rake db:seed
 ```
 
-##### 5. Start the Rails server
+##### 7. Start the Rails server
 
 You can start the rails server using the command given below.
 
@@ -38,7 +53,7 @@ You can start the rails server using the command given below.
 bundle exec rails s
 ```
 
-##### 6. View routes
+##### 8. View routes
 
 Run the following command or go to http://localhost:3000/rails/info/routes to see all routes your application is configured to. 
 
